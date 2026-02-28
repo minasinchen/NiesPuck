@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saison-Highlights – Nies Puck</title>
+  <meta name="description" content="Saison-Automatik: Bildwelt, Farben, Banner und Featured Kategorien." />
+  <meta name="theme-color" content="#fbfaf8" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/season.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="index.html" aria-label="Nies Puck Startseite">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <strong>Nies Puck</strong>
+        <span>Nachhaltige Lieblingsstücke statt Massenware</span>
+      </div>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a data-nav href="index.html">Start</a>
+      <a data-nav href="sortiment.html">Sortiment</a>
+      <a data-nav href="saison.html">Saison</a>
+      <a data-nav href="ueber.html">Über</a>
+      <a data-nav href="so-funktionierts.html">So funktioniert’s</a>
+      <a data-nav href="galerie.html">Galerie</a>
+      <a data-nav href="kontakt.html">Besuch/Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mobile-bar" aria-label="Schnellnavigation">
+  <div class="inner">
+    <a data-nav href="sortiment.html" aria-label="Zum Sortiment">Sortiment</a>
+    <a data-nav href="saison.html" aria-label="Zu Saison-Highlights">Saison</a>
+    <a data-nav href="kontakt.html" aria-label="Zum Kontakt">Route</a>
+    <a data-nav href="index.html" aria-label="Zur Startseite">Home</a>
+  </div>
+</div>
+<main>
+
+<section class="section">
+  <div class="container">
+    <div class="kicker">Saison-Highlights</div>
+    <h1 class="section-title">Automatisch aktuell – Saison: <span data-season="label">—</span></h1>
+    <p style="margin:0; color:var(--muted); max-width:72ch;">
+      Die Website passt sich je nach Datum an: Bildwelt, Akzentfarben, Banner und Featured-Kategorien.
+      Manuell testen: <span class="badge">?season=spring</span> etc.
+    </p>
+
+    <div class="grid two" style="margin-top:18px">
+      <div class="card feature">
+        <div class="kicker">Banner</div>
+        <h3 style="margin:6px 0 8px; font-size:22px; letter-spacing:-.02em;" data-season="bannerTitle">—</h3>
+        <p style="margin:0; color:var(--muted);" data-season="bannerText">—</p>
+        <hr/>
+        <div class="kicker">Featured</div>
+        <div class="chips" data-season="featured"></div>
+        
+      </div>
+
+      <div class="card feature">
+        <div class="kicker">Look-Elemente</div>
+        <div class="list">
+          <div class="row">
+            <div class="icon" aria-hidden="true">🎨</div>
+            <div><strong>Farbnuancen</strong><span>Akzent & Tints werden als CSS-Variablen gesetzt</span></div>
+          </div>
+          <div class="row">
+            <div class="icon" aria-hidden="true">🖼</div>
+            <div><strong>Startseiten-Bildwelt</strong><span>Hero tauscht automatisch (Platzhalterbild)</span></div>
+          </div>
+          <div class="row">
+            <div class="icon" aria-hidden="true">🏷</div>
+            <div><strong>Featured Kategorien</strong><span>angepasst je Saison</span></div>
+          </div>
+        </div>
+        <div style="margin-top:16px">
+          <a class="btn ghost small" href="index.html">Zur Startseite</a>
+          <a class="btn ghost small" href="galerie.html" style="margin-left:8px">Bildwelt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <strong style="color:var(--text); font-size:16px;">Nies Puck</strong>
+        <div style="margin-top:8px; max-width: 52ch;">
+          Ein Kinder Second Hand Laden mit Boutique-Charakter: kuratiert, hochwertig, liebevoll.
+          <span data-season="meta" style="display:inline-block; margin-top:10px;" class="badge">Saison-Look</span>
+        </div>
+        
+      </div>
+      <div>
+        <strong style="color:var(--text); font-size:14px;">Öffnungszeiten</strong>
+        <div style="margin-top:10px; display:grid; gap:6px;">
+          <small>Mo–Fr: 09–12 & 15–18</small>
+          <small>Sa: 09–12</small>
+          <small style="margin-top:8px;">(Angaben bitte bei Bedarf aktualisieren.)</small>
+        </div>
+      </div>
+      <div>
+        <strong style="color:var(--text); font-size:14px;">Kontakt</strong>
+        <div style="margin-top:10px; display:grid; gap:6px;">
+          <small>Falkenberger Landstr. 31 · 28865 Lilienthal</small>
+          <small>Tel. 04298 31588</small>
+          <small><a href="https://www.facebook.com/niespuck/" target="_blank" rel="noreferrer">Facebook</a></small>
+          <small style="margin-top:10px;">
+        </div>
+      </div>
+    </div>
+    <hr/>
+    <small>© <span id="y"></span> Nies Puck </small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
